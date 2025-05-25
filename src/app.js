@@ -6,6 +6,7 @@ import createMenuRoute from "./menu/createMenu.js";
 import getMenuRoute from "./menu/getUserMenu.js";
 import deleteMenuRoute from "./menu/deleteMenu.js";
 import getAllUserMenusRoute from "./menu/getAllUserMenus.js";
+import menuRatingRoute from "./menu/menuRating.js";
 
 const app = express();
 const port = 4000;
@@ -22,6 +23,7 @@ app.use("/menu", createMenuRoute);
 app.use("/menu", getMenuRoute);
 app.use("/menu", deleteMenuRoute);
 app.use("/menu", getAllUserMenusRoute);
+app.use("/menu", menuRatingRoute);
 
 app.listen(port, () => {
     console.log(`Server running at <http://localhost>:${port}/`);
